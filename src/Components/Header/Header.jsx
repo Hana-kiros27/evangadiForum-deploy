@@ -4,10 +4,12 @@ import evangadiLogo from "../../assets/img/EvangadiLogo.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+
 const Header = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
+
   const signOut = () => {
     localStorage.removeItem("token");
     setIsAuthenticated(false);
@@ -47,9 +49,7 @@ const Header = () => {
             SIGN OUT
           </button>
         ) : (
-          <button className={classes.header__signin}>
-            SIGN IN
-          </button>
+          <button className={classes.header__signin}>SIGN IN</button>
         )}
       </div>
       {/* Sidebar for mobile */}
