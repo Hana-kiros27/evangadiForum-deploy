@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import Questions from "./pages/Questions/Questions";
 import Answer from "./pages/Answer/Answer";
 import HowItWorks from "./pages/HowItWorks/HowitWorks";
+import EditComponent from './pages/EditComponent/EditComponent'; // Ensure correct path
 function Routing() {
   return (
     <Routes>
@@ -15,6 +16,7 @@ function Routing() {
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/question" element={<Questions />} />
         <Route path="/home/answers/:questionId" element={<Answer />} />
+        <Route path="/edit/:questionId" element={<EditComponent />} />
       </Route>
     </Routes>
   );
