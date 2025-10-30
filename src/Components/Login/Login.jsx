@@ -59,7 +59,7 @@ function SignIn({ visible }) {
       <p>
         Don't have an account?
         <Link
-          class="lnk-toggler"
+          className="lnk-toggler"
           data-panel="panel-signup"
           onClick={() => setShow(true)}
         >
